@@ -80,6 +80,7 @@ def profile_scraper(user):
                     try:data['location'] = all_locs[0]['node']['location']['name']
                     except:data['location'] = None
                     return data
+                
                 else:
                     return None
             break
