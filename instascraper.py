@@ -74,6 +74,7 @@ def profile_scraper(user):
                     data['full_name'] = js['data']['user']['full_name']
                     data['is_private'] = js['data']['user']['is_private']
                     data['is_verified'] = js['data']['user']['is_verified']
+                    data['profile_picture'] = js['data']['user']['profile_pic_url_hd']
                     data['posts'] = js['data']['user']['edge_owner_to_timeline_media']['count']
                     data['email'] = ','.join(scraper_helper.extract_emails(js['data']['user']['biography']))
                     data['website'] = websites
