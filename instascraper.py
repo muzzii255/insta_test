@@ -24,28 +24,31 @@ def get_proxy():
         'https': f'http://s67:BKKproxies874529@bkk-project.cyberalps.com:{port}'
     }
     return proxy
-headers = """accept: */*
-accept-encoding: gzip, deflate, br
-accept-language: en-GB,en;q=0.9
-sec-ch-prefers-color-scheme: dark
-sec-ch-ua: "Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "macOS"
-sec-fetch-dest: empty
-sec-fetch-mode: cors
-sec-fetch-site: same-origin
-user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
-viewport-width: 1119
-x-ig-app-id: 936619743392459
-x-ig-www-claim: 0
-x-requested-with: XMLHttpRequest"""
-headers = scraper_helper.get_dict(headers)
-
+# headers = """accept: */*
+# accept-encoding: gzip, deflate, br
+# accept-language: en-GB,en;q=0.9
+# sec-ch-prefers-color-scheme: dark
+# sec-ch-ua: "Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"
+# sec-ch-ua-mobile: ?0
+# sec-ch-ua-platform: "macOS"
+# sec-fetch-dest: empty
+# sec-fetch-mode: cors
+# sec-fetch-site: same-origin
+# user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+# viewport-width: 1119
+# x-ig-app-id: 936619743392459
+# x-ig-www-claim: 0
+# x-requested-with: XMLHttpRequest"""
+# headers = scraper_helper.get_dict(headers)
+headers = {
+    "User-Agent": "Mozilla/5.0 (Linux; Android 9; GM1903 Build/PKQ1.190110.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/75.0.3770.143 Mobile Safari/537.36 Instagram 103.1.0.15.119 Android (28/9; 420dpi; 1080x2260; OnePlus; GM1903; OnePlus7; qcom; sv_SE; 164094539)"
+}
 def profile_scraper(user):
     print(user)
     while True:
         try:
             req = requests.get(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={user}',headers=headers,proxies=get_proxy(),verify=False)
+            print(req.text)
             print(req.status_code)
             if req.status_code == 200:
                 js = json.loads(req.text)
@@ -89,4 +92,5 @@ def profile_scraper(user):
             print(e)
             pass
         
+# profile_scraper('socialtypro')
         
