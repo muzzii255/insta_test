@@ -2,14 +2,14 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from instascraper import profile_scraper
 
-class Username(BaseModel):
-    username: str
+# class Username(BaseModel):
+#     username: str
 
 app = FastAPI()
 
-@app.post('/userprofile')
-async def get_profile(text: Username):
-    username = text.username
+@app.get('/profile/{username}')
+async def get_profile(username: str):
     print(username)
-    return profile_scraper(username)
+    data = profile_scraper(username)
+    return data
     
