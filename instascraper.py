@@ -112,8 +112,8 @@ def profile_scraper(user):
                 data['website'] = ','.join(websites)
                 try:data['location'] = all_locs[0]['node']['location']['name']
                 except:data['location'] = None
-                # return data
-                pd.DataFrame(data,index=[0]).to_csv('instadata_new.csv',index=False,mode='a',header=False)
+                return data
+                # pd.DataFrame(data,index=[0]).to_csv('instadata_new.csv',index=False,mode='a',header=False)
             
             else:
                 # print(req.text)
