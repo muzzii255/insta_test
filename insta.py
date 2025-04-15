@@ -11,10 +11,12 @@ proxy_ports = [1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,
 def get_proxy():
     port = random.choice(proxy_ports)
     print(port)
+    # PROXIES
     proxy = {
-        'http': f'http://s67:BKKproxies874529@bkk-project.cyberalps.com:{port}',
-        'https': f'http://s67:BKKproxies874529@bkk-project.cyberalps.com:{port}'
-    }
+          'http': f'http://{port}',
+          'https': f'http://{port}'
+      }
+    
     return proxy
 
 
