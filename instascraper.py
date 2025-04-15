@@ -29,32 +29,7 @@ def is_valid_url(url):
 
 
 proxies = [
-    'http://baysocial1:69np2nxxm7jb@73.127.11.222:1001',
-    'http://baysocial1:69np2nxxm7jb@73.127.11.222:1004',
-    'http://baysocial1:69np2nxxm7jb@73.127.11.222:1005',
-    'http://baysocial1:69np2nxxm7jb@73.127.11.222:1008',
-    'http://proxy:doctor@pxdr.io:56246',
-    'http://proxy:doctor@pxdr.io:31696',
-    'http://proxy:doctor@pxdr.io:36788',
-    'http://proxy:doctor@pxdr.io:41081',
-    'http://proxy:doctor@pxdr.io:21515',
-    'http://proxy:doctor@pxdr.io:29231',
-    'http://proxy:doctor@pxdr.io:28389',
-    'http://proxy:doctor@pxdr.io:22364',
-    'http://proxy:doctor@pxdr.io:53412',
-    'http://proxy:doctor@pxdr.io:38964',
-    'http://francepr:FranceProxies273819@france-proxies.cyberalps.com:1009',
-    'http://francepr:FranceProxies273819@france-proxies.cyberalps.com:1011',
-    'http://francepr:FranceProxies273819@france-proxies.cyberalps.com:1012',
-    'http://francepr:FranceProxies273819@france-proxies.cyberalps.com:1013',
-    'http://francepr:FranceProxies273819@france-proxies.cyberalps.com:1004',
-    'http://francepr:FranceProxies273819@france-proxies.cyberalps.com:1005',
-    'http://francepr:FranceProxies273819@france-proxies.cyberalps.com:1002',
-    'http://francepr:FranceProxies273819@france-proxies.cyberalps.com:1003',
-    'http://francepr:FranceProxies273819@france-proxies.cyberalps.com:1006',
-    'http://francepr:FranceProxies273819@france-proxies.cyberalps.com:1007',
-    'http://francepr:FranceProxies273819@france-proxies.cyberalps.com:1015',
-    'http://dimi27:dimi27@polproxiesgdansk.cyberalps.com:1041',
+    '',
 ]
 def get_proxy():
     port = random.choice(proxies)
